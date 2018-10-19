@@ -1,0 +1,57 @@
+html {
+	background-color: #EDF3FF;
+}
+
+#app {
+	background-color: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+
+}
+
+#heading {
+	border: 5px solid black;
+	font-size: 90px;
+}
+
+li {
+	list-style: none;
+	font-size: 80px;
+}
+
+
+#input {
+	font-size: 80px;
+}
+
+.btn {
+	background-color: #1D185E;
+	color: #fff;
+	font-size: 52px;
+}
+
+.btn[disabled] {
+	background-color: gray;
+	
+}
+
+.btn-cancel {
+	background-color: red;
+	color: #fff;
+	font-size: 52px;
+}
+
+.strikeout {
+	text-decoration: line-through;
+	color: #B8C2CC;
+}
+
+#foot-note {
+	font-size: 22px;
+	color: #000;
+}
+
+#foot-note:hover {
+	font-size: 40px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	
+	<div id="app">
+		<h1 id = "heading">{{ header }}</h1>
+		<li v-for = "item in items" :class = "{strikeout : item.purchase}" @click = "togglePurchased(item)">
+				{{item.content}}
+		</li>
+
+		<button 
+			class = "btn" v-if = "state === 'default'"
+			@click = "changeState('edit')">Add Item
+		</button>	
+		<div id="header" v-if = "state === 'edit'">
+			<button 
+				class = "btn" @click =  "addItem" :disabled = "newItem.length === 0">Save Item
+			</button>
+			<button 
+				class="btn-cancel" @click = "changeState('default')">Cancel
+			</button>
+		</div>
+		<div class="add-item" v-if = "state === 'edit'">
+		<input 
+		type="text" v-model = "newItem" id = "input" placeholder = "Add new item" 
+		@keyup.enter = "addItem"
+		>			
+		</div>
+		<p v-if = "items.length === 0">Nice job, you bought all the items</p>
+	</div>
+
+	<footer>
+		<p id = "foot-note">Created by <a href="https://github.com/abhay676" target = "_blank">abhay676</a></p>
+	</footer>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
